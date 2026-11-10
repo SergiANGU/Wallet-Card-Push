@@ -1,0 +1,7 @@
+{
+  "trailingSlash": false,
+  "rewrites": [
+    { "source": "/ca", "destination": "/index.html" },
+    { "source": "/en", "destination": "/index.html" }
+  ]
+}

@@ -4,8 +4,11 @@ import HowItWorks from './components/HowItWorks.jsx';
 import Features from './components/Features.jsx';
 import BusinessTypes from './components/BusinessTypes.jsx';
 import FinalCta from './components/FinalCta.jsx';
+import { useI18n } from './i18n/index.jsx';
 
 export default function App() {
+  const { t } = useI18n();
+
   return (
     <div className="page">
       <Nav />
@@ -18,7 +21,7 @@ export default function App() {
       </main>
       <footer className="footer container">
         <span>© {new Date().getFullYear()} Segell</span>
-        <span className="text-muted">Compatible con Apple Wallet y Google Wallet</span>
+        <span className="text-muted">{t.footer.compat}</span>
       </footer>
     </div>
   );
