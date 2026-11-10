@@ -3,11 +3,11 @@ import es from './es.js';
 import ca from './ca.js';
 import en from './en.js';
 
-// Cada idioma vive en su propia ruta: / (castellano), /ca/ y /en/.
+// Cada idioma vive en su propia ruta: / (castellano), /ca y /en.
 export const LANGS = {
   es: { label: 'ES', name: 'Español', path: '/', dict: es },
-  ca: { label: 'CA', name: 'Català', path: '/ca/', dict: ca },
-  en: { label: 'EN', name: 'English', path: '/en/', dict: en },
+  ca: { label: 'CA', name: 'Català', path: '/ca', dict: ca },
+  en: { label: 'EN', name: 'English', path: '/en', dict: en },
 };
 
 const STORAGE_KEY = 'segell-lang';

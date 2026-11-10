@@ -1,4 +1,4 @@
-// English copy (served at /en/).
+// English copy (served at /en).
 export default {
   meta: {
     title: 'Segell · Loyalty cards and offers on your customers’ phones',

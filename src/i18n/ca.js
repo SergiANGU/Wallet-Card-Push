@@ -1,4 +1,4 @@
-// Textos en català (servits a /ca/).
+// Textos en català (servits a /ca).
 export default {
   meta: {
     title: 'Segell · Targeta de fidelitat i avisos al mòbil dels teus clients',
