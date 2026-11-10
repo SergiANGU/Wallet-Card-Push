@@ -1,7 +1,9 @@
-import { LANGS, saveLang, useI18n } from '../i18n/index.jsx';
+import { LANGS, pathFor, saveLang, useI18n } from '../i18n/index.jsx';
 
 export default function Nav() {
-  const { lang, t } = useI18n();
+  const { lang, page, t } = useI18n();
+  // Fuera de la portada, las anclas apuntan a la portada del mismo idioma.
+  const home = page === 'home' ? '' : LANGS[lang].path;
 
   return (
     <header className="nav container">
@@ -10,15 +12,21 @@ export default function Nav() {
         Segell
       </a>
       <nav className="nav-links" aria-label={t.nav.menuLabel}>
-        <a href="#como-funciona">{t.nav.how}</a>
-        <a href="#funciones">{t.nav.features}</a>
-        <a href="#precios">{t.nav.pricing}</a>
+        <a href={`${home}#como-funciona`}>{t.nav.how}</a>
+        <a href={`${home}#funciones`}>{t.nav.features}</a>
+        <a href={`${home}#precios`}>{t.nav.pricing}</a>
+        <a
+          href={LANGS[lang].contactPath}
+          aria-current={page === 'contact' ? 'page' : undefined}
+        >
+          {t.nav.contact}
+        </a>
       </nav>
       <nav className="lang-switch" aria-label={t.nav.langLabel}>
         {Object.entries(LANGS).map(([code, l]) => (
           <a
             key={code}
-            href={l.path}
+            href={pathFor(code, page)}
             hrefLang={code}
             lang={code}
             title={l.name}
@@ -29,7 +37,7 @@ export default function Nav() {
           </a>
         ))}
       </nav>
-      <a className="btn btn-primary" href="#empezar">{t.nav.cta}</a>
+      <a className="btn btn-primary" href={page === 'contact' ? '#formulario' : '#empezar'}>{t.nav.cta}</a>
     </header>
   );
 }

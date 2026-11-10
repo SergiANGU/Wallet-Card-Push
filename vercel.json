@@ -2,6 +2,9 @@
   "trailingSlash": false,
   "rewrites": [
     { "source": "/ca", "destination": "/index.html" },
-    { "source": "/en", "destination": "/index.html" }
+    { "source": "/en", "destination": "/index.html" },
+    { "source": "/contacto", "destination": "/index.html" },
+    { "source": "/ca/contacte", "destination": "/index.html" },
+    { "source": "/en/contact", "destination": "/index.html" }
   ]
 }

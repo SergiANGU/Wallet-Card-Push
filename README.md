@@ -21,6 +21,8 @@ src/
     Features.jsx         Sellos / Puntos / Push / Cupones
     BusinessTypes.jsx    Tags de tipos de negocio
     FinalCta.jsx
+    Contact.jsx          Página de contacto (/contacto, /ca/contacte, /en/contact)
+  config/contact.js      Email, WhatsApp y endpoint opcional del formulario
   styles/
     tokens.css           Colores, fuentes (Caprasimo + Figtree, self-hosted), radios, sombras
     base.css             Clases del sistema: .btn, .tag, .card, .seg
