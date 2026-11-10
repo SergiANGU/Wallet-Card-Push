@@ -1,7 +1,9 @@
 import { useState } from 'react';
 import { STAMPS_TOTAL } from '../data/sectors.js';
+import { useI18n } from '../i18n/index.jsx';
 
 export default function PhoneDemo({ sector }) {
+  const { t } = useI18n();
   const [count, setCount] = useState(7);
   const full = count >= STAMPS_TOTAL;
 
@@ -12,7 +14,7 @@ export default function PhoneDemo({ sector }) {
       <div className="blob blob-lg" aria-hidden="true" />
       <div className="blob blob-sm" aria-hidden="true" />
 
-      <div className="phone" role="img" aria-label={`Tarjeta de ${sector.name} con ${count} de ${STAMPS_TOTAL} sellos`}>
+      <div className="phone" role="img" aria-label={t.demo.ariaLabel(sector.name, count, STAMPS_TOTAL)}>
         <div className="phone-screen">
           <span className="phone-title">Wallet</span>
 
@@ -22,7 +24,7 @@ export default function PhoneDemo({ sector }) {
               <span className="pass-kind">{sector.kind}</span>
             </div>
             <div className="pass-count">
-              <span className="pass-label">Sellos</span>
+              <span className="pass-label">{t.demo.stampsLabel}</span>
               <span className="pass-number">
                 {count} / {STAMPS_TOTAL}
               </span>
@@ -33,16 +35,14 @@ export default function PhoneDemo({ sector }) {
               ))}
             </div>
             <span className="pass-reward">
-              {full
-                ? '¡Recompensa lista para canjear!'
-                : `Te faltan ${STAMPS_TOTAL - count} para tu ${sector.reward}`}
+              {full ? t.demo.rewardReady : t.demo.remaining(STAMPS_TOTAL - count, sector.reward)}
             </span>
-            <div className="pass-qr">código QR</div>
+            <div className="pass-qr">{t.demo.qr}</div>
           </div>
 
           {full && (
             <div className="push" role="status">
-              <span className="push-from">{sector.name} · ahora</span>
+              <span className="push-from">{sector.name} · {t.demo.now}</span>
               <span className="push-msg">{sector.rewardPush}</span>
             </div>
           )}
@@ -51,9 +51,9 @@ export default function PhoneDemo({ sector }) {
 
       <div className="stamp-cta">
         <button type="button" className="btn btn-primary btn-stamp" onClick={addStamp}>
-          {full ? 'Reiniciar tarjeta' : 'Sellar +1'}
+          {full ? t.demo.reset : t.demo.stamp}
         </button>
-        <span className="stamp-hint">Pruébalo: pulsa para sellar</span>
+        <span className="stamp-hint">{t.demo.hint}</span>
       </div>
     </div>
   );

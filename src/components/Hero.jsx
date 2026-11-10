@@ -1,29 +1,28 @@
 import { useState } from 'react';
-import { SECTORS } from '../data/sectors.js';
+import { SECTOR_KEYS } from '../data/sectors.js';
+import { useI18n } from '../i18n/index.jsx';
 import PhoneDemo from './PhoneDemo.jsx';
 
 export default function Hero() {
+  const { t } = useI18n();
   const [sector, setSector] = useState('cafeteria');
 
   return (
     <section className="hero container">
       <div className="hero-copy">
-        <span className="tag tag-accent-2">Sin apps · Apple Wallet y Google Wallet</span>
-        <h1 className="hero-title">Tu tarjeta de sellos, ahora en el móvil de tus clientes.</h1>
-        <p className="hero-lead">
-          Adiós a los cartoncitos que se pierden en la cartera. Tus clientes escanean un QR,
-          guardan la tarjeta en su Wallet y tú les avisas de cada promo con una notificación.
-        </p>
+        <span className="tag tag-accent-2">{t.hero.tag}</span>
+        <h1 className="hero-title">{t.hero.title}</h1>
+        <p className="hero-lead">{t.hero.lead}</p>
         <div className="hero-actions">
-          <a className="btn btn-primary btn-lg" href="#empezar">Crea tu tarjeta gratis</a>
-          <a className="btn btn-secondary btn-lg" href="#como-funciona">Ver cómo funciona</a>
+          <a className="btn btn-primary btn-lg" href="#empezar">{t.hero.ctaPrimary}</a>
+          <a className="btn btn-secondary btn-lg" href="#como-funciona">{t.hero.ctaSecondary}</a>
         </div>
-        <span className="hero-note">Lista en 10 minutos. Sin tarjeta de crédito.</span>
+        <span className="hero-note">{t.hero.note}</span>
 
         <fieldset className="sector-picker">
-          <legend>Prueba la demo como:</legend>
+          <legend>{t.hero.pickerLegend}</legend>
           <div className="seg">
-            {Object.entries(SECTORS).map(([key, s]) => (
+            {SECTOR_KEYS.map((key) => (
               <label key={key} className="seg-opt">
                 <input
                   type="radio"
@@ -32,14 +31,14 @@ export default function Hero() {
                   checked={sector === key}
                   onChange={() => setSector(key)}
                 />
-                {s.label}
+                {t.sectors[key].label}
               </label>
             ))}
           </div>
         </fieldset>
       </div>
 
-      <PhoneDemo sector={SECTORS[sector]} />
+      <PhoneDemo sector={t.sectors[sector]} />
     </section>
   );
 }
