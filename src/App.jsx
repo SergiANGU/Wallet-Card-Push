@@ -17,7 +17,7 @@ export default function App() {
         <FinalCta />
       </main>
       <footer className="footer container">
-        <span>© {new Date().getFullYear()} Wallet Card Push</span>
+        <span>© {new Date().getFullYear()} Segell</span>
         <span className="text-muted">Compatible con Apple Wallet y Google Wallet</span>
       </footer>
     </div>

@@ -1,4 +1,4 @@
-# Wallet Card Push · Landing (propuesta 1a)
+# Segell · Landing (segell.cat)
 
 Landing en React + Vite de la propuesta **1a — la tarjeta como protagonista**, con la demo interactiva de sellos.
 
