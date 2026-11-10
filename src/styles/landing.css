@@ -202,3 +202,12 @@
   .push { animation: none; }
   .btn, .stamp { transition: none; }
 }
+
+/* — selector d'idioma en mòbil — */
+@media (max-width: 720px) {
+  .nav { gap: 10px; }
+  .lang-switch a { padding: 4px 5px; }
+}
+@media (max-width: 420px) {
+  .nav > .btn { display: none; } /* el hero ja té el CTA principal */
+}
