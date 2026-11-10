@@ -3,7 +3,7 @@ export default function Nav() {
     <header className="nav container">
       <a className="nav-brand" href="#">
         <span className="brand-dot" aria-hidden="true" />
-        Wallet Card Push
+        Segell
       </a>
       <nav className="nav-links" aria-label="Principal">
         <a href="#como-funciona">Cómo funciona</a>
