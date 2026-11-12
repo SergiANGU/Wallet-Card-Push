@@ -8,7 +8,7 @@ export default {
   nav: {
     how: 'Com funciona',
     features: 'Funcions',
-    pricing: 'Preus',
+    pilot: 'Pilot gratuït',
     cta: 'Prova-ho gratis',
     menuLabel: 'Principal',
     langLabel: 'Idioma',
@@ -21,7 +21,7 @@ export default {
       'Adeu als cartonets que es perden a la cartera. Els teus clients escanegen un QR, desen la targeta al seu Wallet i tu els avises de cada promoció amb una notificació.',
     ctaPrimary: 'Crea la teva targeta gratis',
     ctaSecondary: 'Mira com funciona',
-    note: 'Llesta en 10 minuts. Sense targeta de crèdit.',
+    note: 'Pilot gratuït de 60 dies. Sense targeta de crèdit.',
     pickerLegend: 'Prova la demo com a:',
   },
   demo: {
@@ -111,9 +111,36 @@ export default {
     title: 'Fet per als negocis de barri',
     types: ['Cafeteries', 'Restaurants', 'Perruqueries i estètica', 'Botigues de barri', 'Gimnasos'],
   },
+  pilot: {
+    title: 'Pilot gratuït de 60 dies',
+    lead: 'Busquem els primers negocis de Barcelona per estrenar Segell. Sense cost i sense compromís.',
+    items: [
+      {
+        kicker: 'Te’l muntem',
+        title: 'Tu no has de fer res',
+        body: 'Dissenyem la targeta amb el teu logo i la teva recompensa, i et portem el cartell amb el QR per al taulell.',
+      },
+      {
+        kicker: '60 dies gratis',
+        title: 'Sense targeta i sense permanència',
+        body: 'La fas servir dos mesos amb els teus clients de veritat. Si no et convenç, la traiem i llestos.',
+      },
+      {
+        kicker: 'Després',
+        title: 'Un preu a la teva mida',
+        body: 'Si vols continuar, acordem amb tu una quota mensual segons el que necessiti el teu negoci.',
+      },
+      {
+        kicker: 'A canvi',
+        title: 'Només la teva opinió',
+        body: 'Explica’ns què funciona i què no. Així millorem Segell amb tu.',
+      },
+    ],
+    cta: 'Vull el pilot',
+  },
   finalCta: {
     title: 'Fem un cafè i ho muntem?',
-    body: 'La teva primera targeta, gratis. Si en un mes no tornen més clients, no pagues.',
+    body: 'Et deixem la targeta muntada al teu local i la proves 60 dies gratis, sense compromís.',
     cta: 'Comença gratis',
   },
   contact: {

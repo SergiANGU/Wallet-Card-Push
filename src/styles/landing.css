@@ -153,6 +153,12 @@
 .business h3 { margin: 0; }
 .business-tags { display: flex; flex-wrap: wrap; gap: 10px; }
 
+/* — pilot — */
+.pilot-head { display: flex; flex-direction: column; gap: 12px; }
+.pilot-lead { margin: 0; font-size: 18px; max-width: 600px; color: var(--color-neutral-800); }
+.pilot-cta { align-self: flex-start; }
+.pilot .feature:not(.feature-highlight) { background: var(--color-bg); }
+
 /* — final CTA — */
 .final-cta {
   border-radius: 32px;

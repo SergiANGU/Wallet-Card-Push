@@ -1,10 +1,10 @@
 import { useState } from 'react';
 import { SECTOR_KEYS } from '../data/sectors.js';
-import { useI18n } from '../i18n/index.jsx';
+import { LANGS, useI18n } from '../i18n/index.jsx';
 import PhoneDemo from './PhoneDemo.jsx';
 
 export default function Hero() {
-  const { t } = useI18n();
+  const { lang, t } = useI18n();
   const [sector, setSector] = useState('cafeteria');
 
   return (
@@ -14,7 +14,7 @@ export default function Hero() {
         <h1 className="hero-title">{t.hero.title}</h1>
         <p className="hero-lead">{t.hero.lead}</p>
         <div className="hero-actions">
-          <a className="btn btn-primary btn-lg" href="#empezar">{t.hero.ctaPrimary}</a>
+          <a className="btn btn-primary btn-lg" href={LANGS[lang].contactPath}>{t.hero.ctaPrimary}</a>
           <a className="btn btn-secondary btn-lg" href="#como-funciona">{t.hero.ctaSecondary}</a>
         </div>
         <span className="hero-note">{t.hero.note}</span>

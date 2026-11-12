@@ -8,7 +8,7 @@ export default {
   nav: {
     how: 'How it works',
     features: 'Features',
-    pricing: 'Pricing',
+    pilot: 'Free pilot',
     cta: 'Try it free',
     menuLabel: 'Main',
     langLabel: 'Language',
@@ -21,7 +21,7 @@ export default {
       'Say goodbye to paper cards that get lost in wallets. Customers scan a QR code, save the card to their phone’s Wallet, and you tell them about every offer with a notification.',
     ctaPrimary: 'Create your free card',
     ctaSecondary: 'See how it works',
-    note: 'Ready in 10 minutes. No credit card required.',
+    note: '60-day free pilot. No credit card required.',
     pickerLegend: 'Try the demo as:',
   },
   demo: {
@@ -111,9 +111,36 @@ export default {
     title: 'Made for neighbourhood businesses',
     types: ['Cafés', 'Restaurants', 'Hair & beauty salons', 'Local shops', 'Gyms'],
   },
+  pilot: {
+    title: '60-day free pilot',
+    lead: 'We’re looking for the first Barcelona businesses to launch Segell with. No cost and no commitment.',
+    items: [
+      {
+        kicker: 'We set it up',
+        title: 'You don’t have to do a thing',
+        body: 'We design the card with your logo and reward, and bring you the QR poster for the counter.',
+      },
+      {
+        kicker: '60 days free',
+        title: 'No credit card, no lock-in',
+        body: 'Use it for two months with your real customers. If it’s not for you, we take it down. Simple.',
+      },
+      {
+        kicker: 'Afterwards',
+        title: 'A price that fits you',
+        body: 'If you want to keep going, we agree a monthly fee with you based on what your business needs.',
+      },
+      {
+        kicker: 'In return',
+        title: 'Just your feedback',
+        body: 'Tell us what works and what doesn’t, so we can improve Segell together.',
+      },
+    ],
+    cta: 'I want the pilot',
+  },
   finalCta: {
     title: 'Shall we grab a coffee and set it up?',
-    body: 'Your first card is free. If more customers aren’t coming back within a month, you don’t pay.',
+    body: 'We set the card up in your shop and you try it free for 60 days, no strings attached.',
     cta: 'Start for free',
   },
   contact: {
