@@ -14,7 +14,7 @@ export default function Nav() {
       <nav className="nav-links" aria-label={t.nav.menuLabel}>
         <a href={`${home}#como-funciona`}>{t.nav.how}</a>
         <a href={`${home}#funciones`}>{t.nav.features}</a>
-        <a href={`${home}#precios`}>{t.nav.pricing}</a>
+        <a href={`${home}#piloto`}>{t.nav.pilot}</a>
         <a
           href={LANGS[lang].contactPath}
           aria-current={page === 'contact' ? 'page' : undefined}
@@ -37,7 +37,7 @@ export default function Nav() {
           </a>
         ))}
       </nav>
-      <a className="btn btn-primary" href={page === 'contact' ? '#formulario' : '#empezar'}>{t.nav.cta}</a>
+      <a className="btn btn-primary" href={page === 'contact' ? '#formulario' : LANGS[lang].contactPath}>{t.nav.cta}</a>
     </header>
   );
 }

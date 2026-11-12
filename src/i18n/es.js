@@ -8,7 +8,7 @@ export default {
   nav: {
     how: 'Cómo funciona',
     features: 'Funciones',
-    pricing: 'Precios',
+    pilot: 'Piloto gratis',
     cta: 'Pruébalo gratis',
     menuLabel: 'Principal',
     langLabel: 'Idioma',
@@ -21,7 +21,7 @@ export default {
       'Adiós a los cartoncitos que se pierden en la cartera. Tus clientes escanean un QR, guardan la tarjeta en su Wallet y tú les avisas de cada promo con una notificación.',
     ctaPrimary: 'Crea tu tarjeta gratis',
     ctaSecondary: 'Ver cómo funciona',
-    note: 'Lista en 10 minutos. Sin tarjeta de crédito.',
+    note: 'Piloto gratis de 60 días. Sin tarjeta de crédito.',
     pickerLegend: 'Prueba la demo como:',
   },
   demo: {
@@ -111,9 +111,36 @@ export default {
     title: 'Hecho para negocios de barrio',
     types: ['Cafeterías', 'Restaurantes', 'Peluquerías y estética', 'Tiendas de barrio', 'Gimnasios'],
   },
+  pilot: {
+    title: 'Piloto gratis de 60 días',
+    lead: 'Buscamos los primeros negocios de Barcelona para estrenar Segell. Sin coste y sin compromiso.',
+    items: [
+      {
+        kicker: 'Te lo montamos',
+        title: 'Tú no tienes que hacer nada',
+        body: 'Diseñamos la tarjeta con tu logo y tu recompensa, y te traemos el cartel con el QR para el mostrador.',
+      },
+      {
+        kicker: '60 días gratis',
+        title: 'Sin tarjeta y sin permanencia',
+        body: 'La usas dos meses con tus clientes de verdad. Si no te convence, la quitamos y listo.',
+      },
+      {
+        kicker: 'Después',
+        title: 'Un precio a tu medida',
+        body: 'Si quieres seguir, acordamos contigo una cuota mensual según lo que necesite tu negocio.',
+      },
+      {
+        kicker: 'A cambio',
+        title: 'Solo tu opinión',
+        body: 'Cuéntanos qué funciona y qué no. Así mejoramos Segell contigo.',
+      },
+    ],
+    cta: 'Quiero el piloto',
+  },
   finalCta: {
     title: '¿Tomamos algo y lo montamos?',
-    body: 'Tu primera tarjeta, gratis. Si en un mes no vuelven más clientes, no pagas.',
+    body: 'Te dejamos la tarjeta montada en tu local y la pruebas 60 días gratis, sin compromiso.',
     cta: 'Empezar gratis',
   },
   contact: {
