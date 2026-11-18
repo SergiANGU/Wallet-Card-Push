@@ -39,6 +39,10 @@
   --color-text: #201e1d;
   --color-accent: #c67139;
   --color-accent-2: #7a8a5e;
+  /* Colores del logo de Segell (public/brand/). */
+  --color-brand-terracotta: #bc6433;
+  --color-brand-sage: #a1b57c;
+  --color-brand-cream: #f5ead8;
   --color-divider: color-mix(in srgb, #201e1d 16%, transparent);
 
   --color-neutral-100: #f9f4ed;
