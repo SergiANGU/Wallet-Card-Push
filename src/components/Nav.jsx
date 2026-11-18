@@ -8,8 +8,7 @@ export default function Nav() {
   return (
     <header className="nav container">
       <a className="nav-brand" href={LANGS[lang].path}>
-        <span className="brand-dot" aria-hidden="true" />
-        Segell
+        <img src="/brand/segell-logo.svg" alt="Segell" width="88" height="60" />
       </a>
       <nav className="nav-links" aria-label={t.nav.menuLabel}>
         <a href={`${home}#como-funciona`}>{t.nav.how}</a>
